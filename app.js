@@ -4,6 +4,7 @@ var three = document.getElementById('three');
 var button = document.getElementById('button');
 
 var cat = 'meow';
+var meows = 0;
 
 function meowing() {
   console.log(cat);
@@ -12,7 +13,8 @@ function meowing() {
 }
 
 function addMeow() {
-  console.log('meow added!');
+  meows += 1;
+  console.log(meows + ' meows added!');
   var moreMeow = document.createElement('li');
   moreMeow.textContent = 'MEOW';
   three.appendChild(moreMeow);
