@@ -2,9 +2,12 @@ var one = document.getElementById('one');
 var two = document.getElementById('two');
 var three = document.getElementById('three');
 var button = document.getElementById('button');
+var meowser = document.getElementById('meowser');
+
 
 var cat = 'meow';
 var meows = 0;
+var delayMeow;
 
 function meowing() {
   console.log(cat);
@@ -12,14 +15,22 @@ function meowing() {
   two.textContent = 'That was my cat who just meowed up there.';
 }
 
+function meeeeeow() {
+  var meowSound = new Audio('meow.mp3');
+  meowSound.play();
+  console.log('meow sound');
+}
+
 function addMeow() {
+  meeeeeow();
+  delayMeow = window.setTimeout(meeeeeow, 5000);
   meows += 1;
-  console.log(meows + ' meows added!');
+  meowser.innerHTML = meows + ' meows added!';
   var moreMeow = document.createElement('li');
   moreMeow.textContent = 'MEOW';
   three.appendChild(moreMeow);
 }
 
-meowing();
+// meowing();
 
 button.addEventListener('click', addMeow);
