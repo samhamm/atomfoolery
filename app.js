@@ -21,16 +21,24 @@ function meeeeeow() {
   console.log('meow sound');
 }
 
-function addMeow() {
-  meeeeeow();
-  delayMeow = window.setTimeout(meeeeeow, 5000);
-  meows += 1;
-  meowser.innerHTML = meows + ' meows added!';
-  var moreMeow = document.createElement('li');
-  moreMeow.textContent = 'MEOW';
-  three.appendChild(moreMeow);
+function angryMeow() {
+  var meowSound = new Audio('angry-cat-sound.wav');
+  meowSound.play();
+  console.log('meow sound');
 }
+
+// function addMeow() {
+//   meeeeeow();
+//   // delayMeow = window.setTimeout(meeeeeow, 5000);
+//   meows += 1;
+//   meowser.innerHTML = meows + ' meows added!';
+//   var moreMeow = document.createElement('li');
+//   moreMeow.textContent = 'MEOW';
+//   three.appendChild(moreMeow);
+// }
 
 // meowing();
 
-button.addEventListener('click', addMeow);
+button.addEventListener('click', meeeeeow);
+
+document.getElementById('angry').addEventListener('click', angryMeow);
